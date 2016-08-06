@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      function trimLeft(str) {
+        var copyMode = false;
+        var newString = "";
+
+        for (i = 0; i < str.length; i++) {
+          if (str[i] === " " && copyMode === false) {
+            continue;
+          } else if (str[i] !== " " && copyMode === false) {
+            copyMode = true;
+          };
+
+          if (copyMode) {
+            newString += str[i];
+          };
+        }
+
+        return newString;
+      };
+
+      function trimRight(str) {
+        var copyMode = false;
+        var newString = "";
+
+        for (i = str.length - 1; i >= 0; i--) {
+          if (str[i] === " " && copyMode === false) {
+            continue;
+          } else if (str[i] !== " " && copyMode === false) {
+            copyMode = true;
+          };
+
+          if (copyMode === true) {
+            newString = str[i] + newString;
+          };
+        }
+
+        return newString;
+      };
+
+      function trim(str) {
+        return trimRight(trimLeft(str));
+      };
+
+      console.log(trim("This is a string"));
+      console.log(trim("     This is a string"));
+      console.log(trim("This is a string        "));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+    function substr(string, start, length) {
+      var substring = "";
+
+      if (start < 0) {
+        start = string.length + start;
+      }
+
+      if (start + length > string.length) {
+        length = string.length - start;
+      }
+
+      for (var i = start; i < start + length; i++) {
+        substring += string[i];
+      }
+
+      return substring;
+    }
+
+    var string = "hello world";
+
+    console.log(substr(string, 2, 4));
+    console.log(substr(string, -3, 2));
+    console.log(substr(string, 8, 20));
+    console.log(substr(string, 0, -20));
+    console.log(substr(string, 0, 0));
+    </script>
+  </body>
+</html>

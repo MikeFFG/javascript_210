@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      var apples = 3,
+          bananas = 1,
+          areEqual = apples === bananas;
+          eitherOr = bananas || apples;
+
+      console.log(eitherOr);
+
+      if (apples === bananas) {
+        console.log("They are equal!");
+      } else {
+        if (apples == bananas) {
+          console.log("Same value, but different types");
+        }
+        else {
+          console.log("Not strictly equal :(");
+        }
+      }
+
+      var lastName = "Riley";
+      var familyMessage = lastName === "Riley" ? "You're part of the family!" : "You're not family."
+    </script>
+  </body>
+</html>

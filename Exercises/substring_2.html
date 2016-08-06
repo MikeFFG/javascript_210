@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+    // function substr(string, start, length) {
+    //   var substring = "";
+
+    //   if (start < 0) {
+    //     start = string.length + start;
+    //   }
+
+    //   if (start + length > string.length) {
+    //     length = string.length - start;
+    //   }
+
+    //   for (var i = start; i < start + length; i++) {
+    //     substring += string[i];
+    //   }
+
+    //   return substring;
+    // }
+
+    function substr(string, start, end) {
+      var newString = "";
+      var temp;
+
+      if (end === undefined) {
+        end = string.length
+      };
+
+      if (start < 0 || isNaN(start)) {
+        start = 0;
+      };
+
+      if (end < 0 || isNaN(end)) {
+        end = 0;
+      };
+
+      if (start > end) {
+        temp = start;
+        start = end;
+        end = temp;
+      }
+
+      if (start > string.length) {
+        start = string.length;
+      };
+
+      if (end > string.length) {
+        end = string.length;
+      }
+
+      for (var i = start; i < end; i++) {
+        newString += string[i];
+      }
+
+      return newString;
+    }
+
+    var string = "hello world";
+
+    console.log(substr(string, 2, 4));
+    console.log(substr(string, 4, 2));
+    console.log(substr(string, 0, -1));
+    console.log(substr(string, 2));
+    console.log(substr(string, "a"));
+    console.log(substr(string, 8, 20));
+    </script>
+  </body>
+</html>

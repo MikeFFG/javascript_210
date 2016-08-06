@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      function toLowerCase(string) {
+        var newString = "";
+        var asciiNumeric;
+
+        for (i = 0; i < string.length; i++) {
+          asciiNumeric = string.charCodeAt(i)
+          if (asciiNumeric >= 65 && asciiNumeric <= 90) {
+            asciiNumeric += 32;
+            newString += String.fromCharCode(asciiNumeric);
+          } else {
+            newString += string[i];
+          }
+        }
+        return newString;
+      }
+
+      console.log(toLowerCase("ALPHABET"));
+      console.log(toLowerCase("123"));
+      console.log(toLowerCase("abcDEF"));
+    </script>
+  </body>
+</html>

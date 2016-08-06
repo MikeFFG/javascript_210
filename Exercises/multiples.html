@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      function multiplesOfThreeAndFive(low, high) {
+        for (var low = 1; low <= high; low++) {
+          if (low % 3 === 0 && low % 5 === 0) {
+            console.log(low + "!");
+          } else if (low % 3 === 0 || low % 5 === 0) {
+            console.log(low);
+          }
+        }
+      }
+
+      multiplesOfThreeAndFive(5, 50);
+    </script>
+  </body>
+</html>

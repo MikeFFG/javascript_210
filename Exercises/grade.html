@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+    function average()
+    var letterGrade;
+
+    var score1 = +(prompt("Enter score 1:"));
+    var score2 = +(prompt("Enter score 2:"));
+    var score3 = +(prompt("Enter score 3:"));
+
+    var averageScore = (score1 + score2 + score3) / 3;
+
+    if (averageScore >= 90) {
+      letterGrade = "A";
+    } else if (averageScore >= 70) {
+      letterGrade = "B";
+    } else if (averageScore >= 50) {
+      letterGrade = "C";
+    } else {
+      letterGrade = "F";
+    }
+
+    console.log("Based on the average of your 3 scores your letter grade is " + letterGrade);
+    </script>
+  </body>
+</html>

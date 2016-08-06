@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      function splitString(string, delimeter) {
+        var outputString = "";
+        for (var i = 0; i < string.length; i++) {
+          // if (string[i] === delimeter && outputString != "") {
+          //   console.log(outputString);
+          //   outputString = "";
+          // } else if (string[i] !== delimeter) {
+          //   outputString += string[i]
+          // };
+          if (string[i] === delimeter) {
+            console.log(outputString);
+            outputString = "";
+          } else if (delimeter === "") {
+            console.log(string[i]);
+          } else {
+            outputString += string[i];
+          }
+        }
+
+        if (outputString) {
+          console.log(outputString);
+        }
+      };
+
+      // splitString("abc,123,hello world", ",");
+      splitString("hello", "");
+    </script>
+  </body>
+</html>
